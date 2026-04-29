@@ -1,103 +1,248 @@
-\chapter{关于本模板}
+% =============================================================
+% 开题报告正文
+% 论文题目：基于物流领域大语言模型的智能运营分析助手设计与实现
+% 作者：巩德志  学号：22460420  导师：张朋
+% =============================================================
 
-本模板根据浙江大学研究生院编写的《浙江大学研究生学位论文编写规则》~\cite{zjugradthesisrules}，
-在原有的 zjuthesis 模板~\cite{zjuthesis}基础上开发而来。
+\chapter{选题背景与研究意义}
 
-本模板的本科生版本\cite{zjuthesisrules}得到了浙江大学本科生院老师的支持与审核，
-已经在本科生院网上公示。
-但当前的研究生版本并未经过研究生院老师的审核，
-同学们使用时要注意对照模板与要求，
-切不可盲目使用。
+\section{研究背景}
 
-作者本人并未编写过浙江大学研究生毕业论文，
-所以不清楚具体要求。
-如果有热心同学愿意帮忙，
-可以替我联系相关老师，我会配合审核并修改代码。
+% TODO: 1500 字左右，阐述：
+% 1. 物流行业运营痛点（咨询量大、知识孤岛、分析链路长、人力成本高）
+% 2. 大语言模型与智能体技术在垂直行业的发展趋势
+% 3. 物流领域大模型落地面临的三大挑战：多Agent协同、长链路执行、检索幻觉
 
-\section{Overleaf 使用注意事项}
+\subsection{物流行业运营现状与痛点}
 
-如果你在Overleaf上编译本模板，请注意如下事项：
+\subsection{大语言模型与智能体技术发展}
 
-\begin{itemize}
-    \item 删除根目录的 ``.latexmkrc'' 文件，否则编译失败且不报任何错误
-    \item 字体有版权所以本模板不能附带字体，请务必手动上传字体文件，并在各个专业模板下手动指定字体。
-        具体方法参照 GitHub 主页的说明。
-    \item 当前的Overleaf默认使用TexLive 2017进行编译，但一些伪粗体复制乱码的问题需要TexLive 2019版本来解决。
-        所以各位同学可以在Overleaf上编写论文时务必切换到TexLive 2019或更新版本来编译，以免产生查重相关问题。
-        具体说明参照 GitHub 主页。
-\end{itemize}
+\subsection{物流领域智能体落地的关键挑战}
 
 
-\section{节标题}
+\section{研究意义}
 
-我们可以用includegraphics来插入现有的jpg等格式的图片，
-如\autoref{fig:zju-logo}所示。
+\subsection{工程价值}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=.3\linewidth]{logo/zju}
-    \caption{\label{fig:zju-logo}浙江大学LOGO}
-\end{figure}
+\subsection{学术价值}
+
+\subsection{行业价值}
 
 
-\subsection{小节标题}
+\chapter{国内外研究现状}
+
+\section{领域大语言模型与指令微调研究}
+
+\section{智能体任务规划与工具调用研究}
+
+\section{检索增强生成与检索器优化研究}
+
+\section{多意图识别与智能路由研究}
+
+\section{多Agent系统工程与编排框架研究}
+
+\section{现状小结与不足}
 
 
-\par 如\autoref{tab:sample}所示，这是一张自动调节列宽的表格。
+\chapter{研究内容与核心创新点}
 
-\begin{table}[htbp]
-    \caption{\label{tab:sample}自动调节列宽的表格}
-    \begin{tabularx}{\linewidth}{c|X<{\centering}}
-        \hline
-        第一列 & 第二列 \\ \hline
-        xxx & xxx \\ \hline
-        xxx & xxx \\ \hline
-        xxx & xxx \\ \hline
-    \end{tabularx}
-\end{table}
+\section{研究问题定义}
+
+\subsection{物流智能运营分析助手整体任务形式化}
+
+\subsection{路由层、执行层、知识层三层子问题}
+
+\subsection{误差传播链与评价指标体系}
 
 
-\par 如\autoref{equ:sample}，这是一个公式
+\section{核心创新点}
 
-\begin{equation}
-    \label{equ:sample}
-    A=\overbrace{(a+b+c)+\underbrace{i(d+e+f)}_{\text{虚数}}}^{\text{复数}}
-\end{equation}
+\subsection{面向多Agent协同的代价敏感路由与安全拒识机制}
 
-\chapter{另一章}
+% TODO: 背景 → 问题 → 方案
+
+\subsection{不确定性感知的工具规划与自修复编排}
+
+% TODO: 背景 → 问题 → 方案
+
+\subsection{结构化难负例与生成反馈联合的两阶段检索器优化}
+
+% TODO: 背景 → 问题 → 方案
 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=.3\linewidth]{example-image-a}
-    \caption{\label{fig:fig-placeholder}图片占位符}
-\end{figure}
+\chapter{系统设计与工程实现}
 
-\chapter{再一章}
+\section{总体架构设计}
 
-\par 如\autoref{alg:sample}，这是一个算法
+\subsection{四层架构:应用层—智能体层—模型服务层—数据与工具层}
 
-\begin{algorithm}[H]
-    \begin{algorithmic} % enter the algorithmic environment
-        \REQUIRE $n \geq 0 \vee x \neq 0$
-        \ENSURE $y = x^n$
-        \STATE $y \Leftarrow 1$
-        \IF{$n < 0$}
-            \STATE $X \Leftarrow 1 / x$
-            \STATE $N \Leftarrow -n$
-        \ELSE
-            \STATE $X \Leftarrow x$
-            \STATE $N \Leftarrow n$
-        \ENDIF
-        \WHILE{$N \neq 0$}
-            \IF{$N$ is even}
-                \STATE $X \Leftarrow X \times X$
-                \STATE $N \Leftarrow N / 2$
-            \ELSE[$N$ is odd]
-                \STATE $y \Leftarrow y \times X$
-                \STATE $N \Leftarrow N - 1$
-            \ENDIF
-        \ENDWHILE
-    \end{algorithmic}
-    \caption{\label{alg:sample}算法样例}
-\end{algorithm}
+\subsection{模块划分与职责边界}
+
+\subsection{请求生命周期与时序图}
+
+\subsection{三大创新点在架构中的定位}
+
+
+\section{应用层实现}
+
+\subsection{FastAPI网关:REST与WebSocket双协议}
+
+\subsection{流式输出与长会话管理}
+
+\subsection{会话上下文存储与多轮对话记忆}
+
+\subsection{鉴权、限流与全链路追踪}
+
+
+\section{智能体层实现}
+
+\subsection{子Agent体系}
+
+\subsection{编排层状态机与工具调用循环}
+
+\subsection{Agent间协作与上下文传递}
+
+\subsection{错误恢复与降级策略}
+
+
+\section{模型服务层实现}
+
+\subsection{物流领域大模型部署}
+
+\subsection{Embedding模型服务}
+
+\subsection{统一推理网关与模型路由}
+
+
+\section{数据与工具层实现}
+
+\subsection{向量知识库构建}
+
+\subsection{业务数据库与结构化数据接入}
+
+\subsection{外部工具代理层}
+
+\subsection{工具调用安全与沙箱}
+
+
+\section{数据工程Pipeline}
+
+\subsection{三类训练数据构建流程}
+
+\subsection{LLM辅助数据合成与人工校验}
+
+\subsection{端到端评测集构造}
+
+\subsection{数据版本管理}
+
+
+\chapter{关键算法技术路线}
+
+\section{总体技术路线图}
+
+\section{创新点一:代价敏感层级路由模块}
+
+\subsection{两级标签体系设计}
+
+\subsection{代价矩阵构造方法}
+
+\subsection{双阈值级联拒识算法}
+
+\subsection{细类头增量学习流程}
+
+
+\section{创新点二:工具规划与自修复编排}
+
+\subsection{ReAct轨迹SFT数据构造}
+
+\subsection{Self-confidence估计方法}
+
+\subsection{``规划-验证-自修复''三阶编排状态机}
+
+\subsection{合成偏好数据生成Pipeline}
+
+\subsection{DPO对齐训练}
+
+
+\section{创新点三:两阶段检索器优化}
+
+\subsection{阶段一:结构化难负例与查询改写}
+
+\subsection{阶段二:生成反馈信号采集与打分}
+
+\subsection{联合微调训练流程}
+
+
+\section{训练框架与显存优化}
+
+\subsection{LLaMA-Factory与QLoRA微调栈}
+
+\subsection{DPO显存优化}
+
+\subsection{分布式训练与checkpoint管理}
+
+
+\section{基线方法与对比实验设计}
+
+
+\chapter{部署与评测方案}
+
+\section{部署形态}
+
+\subsection{容器化与编排}
+
+\subsection{GPU集群调度与资源隔离}
+
+\subsection{灰度发布与A/B测试}
+
+
+\section{评测体系}
+
+\subsection{路由层指标}
+
+\subsection{执行层指标}
+
+\subsection{知识层指标}
+
+\subsection{系统层指标}
+
+\subsection{端到端典型场景评测}
+
+
+\section{消融实验设计}
+
+
+\chapter{预期研究成果}
+
+\section{学术产出}
+
+\section{系统产出}
+
+\section{预期性能指标}
+
+
+\chapter{研究可行性与进度安排}
+
+\section{技术可行性}
+
+\subsection{基座模型与微调方案}
+
+\subsection{算力资源}
+
+\subsection{工程栈成熟度}
+
+
+\section{研究基础}
+
+\subsection{前期文献调研与方法论储备}
+
+\subsection{数据与业务资源}
+
+\subsection{工程基础设施}
+
+
+\section{研究进度安排}
+
+% TODO: 甘特图
+
+\section{风险识别与应对}

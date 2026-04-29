@@ -1,5 +1,21 @@
 \cleardoublepage
 \chapternonum{摘要}
 
+\par 针对物流行业在运营分析、客户服务、新人培训、业务知识问答等场景中面临的咨询量大、知识孤岛、分析链路长、人力成本高等痛点，本研究基于物流领域大语言模型，设计并实现一套智能运营分析助手，旨在通过自然语言交互为物流行业管理与一线人员提供从实时问答到深度分析的端到端智能支持，提升运营效率、优化决策质量、加速新人成长并统一知识传承。
+
+\par 本研究构建``应用层—智能体层—模型服务层—数据与工具层''四层系统架构，围绕一次请求在系统中的生命周期，重点开展三个方向的关键技术研究：一是面向多Agent协同的代价敏感路由与安全拒识机制，通过两级标签体系、错误代价矩阵加权损失函数、双阈值级联拒识与细类头增量学习，提升路由层在错误代价不对称与长尾意图持续扩增场景下的鲁棒性；二是不确定性感知的工具规划与自修复编排，在ReAct范式上引入步骤级置信度估计，设计``规划-验证-自修复''三阶编排器，并结合程序化扰动生成的合成偏好数据与DPO对齐，提升长链路工具调用的端到端完成率与错误恢复能力；三是结构化难负例与生成反馈联合的两阶段检索器优化，第一阶段基于SOP编号结构挖掘难负例并用LLM查询改写增强正例多样性，第二阶段以生成器反馈作为软监督信号对检索器二次微调，使检索目标由``语义相关''升级为``对生成有用''。
+
+\par 本研究还完成系统工程实现、三类训练数据构建、端到端评测基准搭建以及容器化部署，并通过模块级指标、端到端指标、系统效率指标三个维度对所提方法进行量化验证，为物流行业领域智能体的工程落地提供系统化的方法论参考。
+
+\par \textbf{关键词：}物流领域大语言模型；智能体；代价敏感路由；工具规划；自修复；检索增强生成；难负例挖掘
+
 \cleardoublepage
 \chapternonum{Abstract}
+
+\par To address the long-standing pain points in logistics operations including high volume of routine inquiries, knowledge silos, long analytical chains, and high labor costs, this study designs and implements an intelligent operation analysis assistant based on a logistics domain large language model. The goal is to provide operation managers and front-line staff with end-to-end intelligent support ranging from real-time question answering to in-depth analysis through natural language interaction, thereby improving operational efficiency, optimizing decision quality, accelerating new-employee on-boarding, and unifying knowledge inheritance.
+
+\par This work builds a four-layer architecture consisting of an application layer, an agent layer, a model service layer, and a data \& tool layer. Centered on the life cycle of a user request, three key technical innovations are proposed. First, a cost-sensitive hierarchical routing mechanism with safe rejection is designed for multi-agent coordination, featuring a two-level label schema, a cost-weighted loss function, dual-threshold cascade rejection, and incremental learning of fine-grained heads, which together improve routing robustness under asymmetric error costs and continuously expanding long-tail intents. Second, an uncertainty-aware tool planning and self-repair orchestration framework is proposed on top of the ReAct paradigm, introducing step-wise confidence estimation, a three-stage ``plan-verify-repair'' orchestrator, and DPO alignment with synthetic preference data generated via programmatic perturbations, which substantially improves end-to-end task completion rate and error recovery in long-chain tool invocations. Third, a two-stage retriever optimization approach is developed, in which the first stage exploits structured hard negatives derived from SOP numbering hierarchies together with LLM-based query rewriting for positive augmentation, and the second stage leverages soft supervision signals from generator feedback to further fine-tune the retriever, shifting the optimization objective from ``semantic relevance'' to ``helpfulness for generation''.
+
+\par The system implementation, construction of three categories of training data, an end-to-end evaluation benchmark, and containerized deployment are also completed. The proposed methods are quantitatively validated from three perspectives---module-level metrics, end-to-end metrics, and system efficiency metrics, providing a systematic methodology reference for the engineering deployment of domain-specific intelligent agents in the logistics industry.
+
+\par \textbf{Keywords:} Logistics Domain Large Language Model; Intelligent Agent; Cost-sensitive Routing; Tool Planning; Self-repair; Retrieval-Augmented Generation; Hard Negative Mining
