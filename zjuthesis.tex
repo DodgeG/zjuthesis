@@ -28,7 +28,7 @@
     Grade           = 2024,            % only the year, no '级'
     Major           = 计算机科学与技术,
     Department      = 计算机科学与技术学院,
-    SubmitDate      = 2026年5月,
+    SubmitDate      = 2026 年 1 月 1 日,
     MajorFormat     = general,
     Degree          = graduate,        % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
@@ -37,7 +37,7 @@
     Language        = chinese,         % 'chinese'  or 'english'
     % Graduate Thesis Info
     GradLevel       = master,          % 'master' or 'doctor'
-    Topic           = 人工智能,
+    Topic           = 数据科学与工程,
     ColaboratorName = 合作导师,
     % Table of Contents
     ListOfContents  = true,
@@ -152,18 +152,19 @@
 
 \newcommand{\inputgraduate}
 {
+    % 开题报告简化流程:封面 + 摘要 + 目录 + 正文 + 参考文献
     \coverstyle
-    \inputpage{cover}
+    \inputpage{proposal/cover}
 
     \prevstyle
-    \inputpage{previous}
+    \inputpage{proposal/previous}
     \inputpage{toc}
-    
+
     % Main contents
     \bodystyle
     \inputbody{content}
 
-    % Post part
+    % Post part (references only)
     \poststyle
     \inputbody{post}
 }
