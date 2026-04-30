@@ -17,7 +17,7 @@
     % Debugging Settings
     PrintFilePath   = false,            % print tex file path for each page
     % Layout Settings
-    TwoSide         = true,             % set to false if don't need empty pages
+    TwoSide         = false,            % 单面模式,不插入空白页
     TrueBlankPage   = false,            % 设置为真将使得空白页不再拥有页眉页脚和页号
     % Thesis Info
     ClassNumber     = TP391,                     % 按中国图书分类法，学位办网上可查
@@ -150,21 +150,19 @@
 
 \newcommand{\inputgraduate}
 {
-    % 开题报告简化流程:封面 + 摘要 + 目录 + 正文 + 参考文献
+    % 开题报告流程:封面 → 目录 → 摘要 → 正文
     \coverstyle
     \inputpage{proposal/cover}
 
     \prevstyle
-    \inputpage{proposal/previous}
+    \pagenumbering{Roman}
+    \resetpagecounter{}
     \inputpage{toc}
+    \inputpage{abstract}
 
     % Main contents
     \bodystyle
     \inputbody{content}
-
-    % Post part (references only)
-    \poststyle
-    \inputbody{post}
 }
 
 \begin{document}
