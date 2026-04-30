@@ -1,259 +1,322 @@
 % =============================================================
 % 参考文献库 ref.bib
-% 分类骨架: 引用 key 已登记占位, 字段信息待补全
-% 标注 TODO-META 的条目需要补充 DOI/URL/volume/pages 等完整元数据
+% 按 GB/T 7714-2015 补全 DOI / pages / volume / publisher 等元数据
+% 样式通过 biblatex + gb7714-2015 套件渲染, 不手工写 [1] 序号
 % =============================================================
 
 % -------------------------------------------------------------
 % [A] 通用与领域大语言模型
 % -------------------------------------------------------------
 @article{gpt4,
-    author  = {OpenAI},
-    title   = {{GPT-4} Technical Report},
-    journal = {arXiv preprint arXiv:2303.08774},
-    year    = {2023},
-    % TODO-META
+    author       = {OpenAI},
+    title        = {{GPT-4} Technical Report},
+    journal      = {arXiv preprint arXiv:2303.08774},
+    year         = {2023},
+    eprint       = {2303.08774},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.CL},
+    doi          = {10.48550/arXiv.2303.08774},
+    url          = {https://arxiv.org/abs/2303.08774},
 }
 
 @article{llama2,
-    author  = {Touvron, Hugo and others},
-    title   = {{LLaMA} 2: Open Foundation and Fine-Tuned Chat Models},
-    journal = {arXiv preprint arXiv:2307.09288},
-    year    = {2023},
-    % TODO-META
+    author       = {Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and others},
+    title        = {{LLaMA} 2: Open Foundation and Fine-Tuned Chat Models},
+    journal      = {arXiv preprint arXiv:2307.09288},
+    year         = {2023},
+    eprint       = {2307.09288},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.CL},
+    doi          = {10.48550/arXiv.2307.09288},
+    url          = {https://arxiv.org/abs/2307.09288},
 }
 
 @article{qwen2_5,
-    author  = {{Qwen Team}},
-    title   = {{Qwen2.5} Technical Report},
-    journal = {arXiv preprint arXiv:2412.15115},
-    year    = {2024},
-    % TODO-META
+    author       = {{Qwen Team}},
+    title        = {{Qwen2.5} Technical Report},
+    journal      = {arXiv preprint arXiv:2412.15115},
+    year         = {2024},
+    eprint       = {2412.15115},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.CL},
+    doi          = {10.48550/arXiv.2412.15115},
+    url          = {https://arxiv.org/abs/2412.15115},
 }
 
 @article{bloomberggpt,
-    author  = {Wu, Shijie and others},
-    title   = {{BloombergGPT}: A Large Language Model for Finance},
-    journal = {arXiv preprint arXiv:2303.17564},
-    year    = {2023},
-    % TODO-META
+    author       = {Wu, Shijie and Irsoy, Ozan and Lu, Steven and Dabravolski, Vadim and Dredze, Mark and Gehrmann, Sebastian and Kambadur, Prabhanjan and Rosenberg, David and Mann, Gideon},
+    title        = {{BloombergGPT}: A Large Language Model for Finance},
+    journal      = {arXiv preprint arXiv:2303.17564},
+    year         = {2023},
+    eprint       = {2303.17564},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.LG},
+    doi          = {10.48550/arXiv.2303.17564},
+    url          = {https://arxiv.org/abs/2303.17564},
 }
 
 @article{medpalm,
-    author  = {Singhal, Karan and others},
-    title   = {Large Language Models Encode Clinical Knowledge},
-    journal = {Nature},
-    year    = {2023},
-    % TODO-META
+    author       = {Singhal, Karan and Azizi, Shekoofeh and Tu, Tao and Mahdavi, S. Sara and Wei, Jason and Chung, Hyung Won and Scales, Nathan and Tanwani, Ajay and Cole-Lewis, Heather and Pfohl, Stephen and others},
+    title        = {Large Language Models Encode Clinical Knowledge},
+    journal      = {Nature},
+    year         = {2023},
+    volume       = {620},
+    number       = {7972},
+    pages        = {172--180},
+    doi          = {10.1038/s41586-023-06291-2},
 }
 
 % -------------------------------------------------------------
 % [B] 微调与对齐方法
 % -------------------------------------------------------------
 @inproceedings{lora,
-    author    = {Hu, Edward J. and others},
-    title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
-    booktitle = {ICLR},
-    year      = {2022},
-    % TODO-META
+    author       = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+    title        = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+    booktitle    = {The Tenth International Conference on Learning Representations (ICLR 2022)},
+    year         = {2022},
+    address      = {Virtual},
+    url          = {https://openreview.net/forum?id=nZeVKeeFYf9},
 }
 
-@article{qlora,
-    author  = {Dettmers, Tim and others},
-    title   = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
-    journal = {NeurIPS},
-    year    = {2023},
-    % TODO-META
+@inproceedings{qlora,
+    author       = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+    title        = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract-Conference.html},
 }
 
 @inproceedings{dpo,
-    author    = {Rafailov, Rafael and others},
-    title     = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
-    booktitle = {NeurIPS},
-    year      = {2023},
-    % TODO-META
+    author       = {Rafailov, Rafael and Sharma, Archit and Mitchell, Eric and Ermon, Stefano and Manning, Christopher D. and Finn, Chelsea},
+    title        = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html},
 }
-
 
 % -------------------------------------------------------------
 % [C] 智能体、工具使用与规划
 % -------------------------------------------------------------
 @inproceedings{react,
-    author    = {Yao, Shunyu and others},
-    title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
-    booktitle = {ICLR},
-    year      = {2023},
-    % TODO-META
+    author       = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+    title        = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
+    booktitle    = {The Eleventh International Conference on Learning Representations (ICLR 2023)},
+    year         = {2023},
+    address      = {Kigali, Rwanda},
+    url          = {https://openreview.net/forum?id=WE_vluYUL-X},
 }
 
 @inproceedings{toolformer,
-    author    = {Schick, Timo and others},
-    title     = {{Toolformer}: Language Models Can Teach Themselves to Use Tools},
-    booktitle = {NeurIPS},
-    year      = {2023},
-    % TODO-META
+    author       = {Schick, Timo and Dwivedi-Yu, Jane and Dess{\`\i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+    title        = {{Toolformer}: Language Models Can Teach Themselves to Use Tools},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html},
 }
 
 @misc{functioncalling,
-    author = {OpenAI},
-    title  = {Function Calling and Other API Updates},
-    year   = {2023},
-    howpublished = {\url{https://openai.com/blog/function-calling-and-other-api-updates}},
-    % TODO-META
+    author       = {OpenAI},
+    title        = {Function Calling and Other {API} Updates},
+    year         = {2023},
+    howpublished = {OpenAI Blog},
+    url          = {https://openai.com/index/function-calling-and-other-api-updates/},
+    urldate      = {2026-04-30},
 }
 
 @inproceedings{tot,
-    author    = {Yao, Shunyu and others},
-    title     = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
-    booktitle = {NeurIPS},
-    year      = {2023},
-    % TODO-META
+    author       = {Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Thomas L. and Cao, Yuan and Narasimhan, Karthik},
+    title        = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://openreview.net/forum?id=5Xc1ecxO1h},
 }
 
 @misc{langchain,
-    author = {Chase, Harrison},
-    title  = {{LangChain}},
-    year   = {2023},
-    howpublished = {\url{https://github.com/langchain-ai/langchain}},
-    % TODO-META
+    author       = {Chase, Harrison},
+    title        = {{LangChain}: Building Applications with {LLMs} through Composability},
+    year         = {2022},
+    howpublished = {GitHub repository},
+    url          = {https://github.com/langchain-ai/langchain},
+    urldate      = {2026-04-30},
 }
 
 @misc{langgraph,
-    author = {{LangChain AI}},
-    title  = {{LangGraph}: Building Stateful, Multi-Actor Applications with LLMs},
-    year   = {2024},
-    howpublished = {\url{https://github.com/langchain-ai/langgraph}},
-    % TODO-META
+    author       = {{LangChain AI}},
+    title        = {{LangGraph}: Building Stateful, Multi-Actor Applications with {LLMs}},
+    year         = {2024},
+    howpublished = {GitHub repository},
+    url          = {https://github.com/langchain-ai/langgraph},
+    urldate      = {2026-04-30},
 }
 
-@article{reflexion,
-    author  = {Shinn, Noah and others},
-    title   = {{Reflexion}: Language Agents with Verbal Reinforcement Learning},
-    journal = {NeurIPS},
-    year    = {2023},
-    % TODO-META
+@inproceedings{reflexion,
+    author       = {Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+    title        = {{Reflexion}: Language Agents with Verbal Reinforcement Learning},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html},
 }
 
 @inproceedings{selfrefine,
-    author    = {Madaan, Aman and others},
-    title     = {{Self-Refine}: Iterative Refinement with Self-Feedback},
-    booktitle = {NeurIPS},
-    year      = {2023},
-    % TODO-META
+    author       = {Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and others},
+    title        = {{Self-Refine}: Iterative Refinement with Self-Feedback},
+    booktitle    = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+    year         = {2023},
+    address      = {New Orleans, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2023/hash/91edff07232fb1b55a505a9e9f6c0ff3-Abstract-Conference.html},
 }
-
 
 % -------------------------------------------------------------
 % [D] 检索增强生成与检索器
 % -------------------------------------------------------------
 @inproceedings{rag,
-    author    = {Lewis, Patrick and others},
-    title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
-    booktitle = {NeurIPS},
-    year      = {2020},
-    % TODO-META
+    author       = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt{\"a}schel, Tim and Riedel, Sebastian and Kiela, Douwe},
+    title        = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+    booktitle    = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+    year         = {2020},
+    pages        = {9459--9474},
+    address      = {Virtual},
+    url          = {https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html},
 }
 
 @inproceedings{dpr,
-    author    = {Karpukhin, Vladimir and others},
-    title     = {Dense Passage Retrieval for Open-Domain Question Answering},
-    booktitle = {EMNLP},
-    year      = {2020},
-    % TODO-META
+    author       = {Karpukhin, Vladimir and O{\u{g}}uz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
+    title        = {Dense Passage Retrieval for Open-Domain Question Answering},
+    booktitle    = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    year         = {2020},
+    pages        = {6769--6781},
+    publisher    = {Association for Computational Linguistics},
+    address      = {Online},
+    doi          = {10.18653/v1/2020.emnlp-main.550},
 }
 
 @inproceedings{colbert,
-    author    = {Khattab, Omar and Zaharia, Matei},
-    title     = {{ColBERT}: Efficient and Effective Passage Search via Contextualized Late Interaction over {BERT}},
-    booktitle = {SIGIR},
-    year      = {2020},
-    % TODO-META
+    author       = {Khattab, Omar and Zaharia, Matei},
+    title        = {{ColBERT}: Efficient and Effective Passage Search via Contextualized Late Interaction over {BERT}},
+    booktitle    = {Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2020)},
+    year         = {2020},
+    pages        = {39--48},
+    publisher    = {ACM},
+    address      = {Virtual Event, China},
+    doi          = {10.1145/3397271.3401075},
 }
 
-@article{bge,
-    author  = {Xiao, Shitao and others},
-    title   = {{C-Pack}: Packaged Resources To Advance General Chinese Embedding},
-    journal = {arXiv preprint arXiv:2309.07597},
-    year    = {2023},
-    % TODO-META
+@inproceedings{bge,
+    author       = {Xiao, Shitao and Liu, Zheng and Zhang, Peitian and Muennighoff, Niklas and Lian, Defu and Nie, Jian-Yun},
+    title        = {{C-Pack}: Packed Resources For General Chinese Embeddings},
+    booktitle    = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024)},
+    year         = {2024},
+    pages        = {641--649},
+    publisher    = {ACM},
+    address      = {Washington, DC, USA},
+    doi          = {10.1145/3626772.3657878},
 }
 
 @article{e5,
-    author  = {Wang, Liang and others},
-    title   = {Text Embeddings by Weakly-Supervised Contrastive Pre-training},
-    journal = {arXiv preprint arXiv:2212.03533},
-    year    = {2022},
-    % TODO-META
+    author       = {Wang, Liang and Yang, Nan and Huang, Xiaolong and Jiao, Binxing and Yang, Linjun and Jiang, Daxin and Majumder, Rangan and Wei, Furu},
+    title        = {Text Embeddings by Weakly-Supervised Contrastive Pre-training},
+    journal      = {arXiv preprint arXiv:2212.03533},
+    year         = {2022},
+    eprint       = {2212.03533},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.CL},
+    doi          = {10.48550/arXiv.2212.03533},
+    url          = {https://arxiv.org/abs/2212.03533},
 }
 
-@article{hardneg,
-    author  = {Xiong, Lee and others},
-    title   = {Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval},
-    journal = {ICLR},
-    year    = {2021},
-    % TODO-META
+@inproceedings{hardneg,
+    author       = {Xiong, Lee and Xiong, Chenyan and Li, Ye and Tang, Kwok-Fung and Liu, Jialin and Bennett, Paul N. and Ahmed, Junaid and Overwijk, Arnold},
+    title        = {Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval},
+    booktitle    = {The Ninth International Conference on Learning Representations (ICLR 2021)},
+    year         = {2021},
+    address      = {Virtual},
+    url          = {https://openreview.net/forum?id=zeFrfgyZln},
 }
 
 @article{rerank,
-    author  = {Nogueira, Rodrigo and Cho, Kyunghyun},
-    title   = {Passage Re-ranking with {BERT}},
-    journal = {arXiv preprint arXiv:1901.04085},
-    year    = {2019},
-    % TODO-META
+    author       = {Nogueira, Rodrigo and Cho, Kyunghyun},
+    title        = {Passage Re-ranking with {BERT}},
+    journal      = {arXiv preprint arXiv:1901.04085},
+    year         = {2019},
+    eprint       = {1901.04085},
+    archiveprefix= {arXiv},
+    primaryclass = {cs.IR},
+    doi          = {10.48550/arXiv.1901.04085},
+    url          = {https://arxiv.org/abs/1901.04085},
 }
 
-@article{repllama,
-    author  = {Ma, Xueguang and others},
-    title   = {Fine-Tuning {LLaMA} for Multi-Stage Text Retrieval},
-    journal = {SIGIR},
-    year    = {2024},
-    % TODO-META
+@inproceedings{repllama,
+    author       = {Ma, Xueguang and Wang, Liang and Yang, Nan and Wei, Furu and Lin, Jimmy},
+    title        = {Fine-Tuning {LLaMA} for Multi-Stage Text Retrieval},
+    booktitle    = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024)},
+    year         = {2024},
+    pages        = {2421--2425},
+    publisher    = {ACM},
+    address      = {Washington, DC, USA},
+    doi          = {10.1145/3626772.3657951},
 }
-
 
 % -------------------------------------------------------------
 % [E] 代价敏感学习与不确定性估计
 % -------------------------------------------------------------
-@article{costsensitive,
-    author  = {Elkan, Charles},
-    title   = {The Foundations of Cost-Sensitive Learning},
-    journal = {IJCAI},
-    year    = {2001},
-    % TODO-META
+@inproceedings{costsensitive,
+    author       = {Elkan, Charles},
+    title        = {The Foundations of Cost-Sensitive Learning},
+    booktitle    = {Proceedings of the 17th International Joint Conference on Artificial Intelligence (IJCAI 2001)},
+    year         = {2001},
+    volume       = {17},
+    pages        = {973--978},
+    publisher    = {Morgan Kaufmann},
+    address      = {Seattle, USA},
 }
 
 @inproceedings{focalloss,
-    author    = {Lin, Tsung-Yi and others},
-    title     = {Focal Loss for Dense Object Detection},
-    booktitle = {ICCV},
-    year      = {2017},
-    % TODO-META
+    author       = {Lin, Tsung-Yi and Goyal, Priya and Girshick, Ross and He, Kaiming and Doll{\'a}r, Piotr},
+    title        = {Focal Loss for Dense Object Detection},
+    booktitle    = {Proceedings of the IEEE International Conference on Computer Vision (ICCV 2017)},
+    year         = {2017},
+    pages        = {2999--3007},
+    publisher    = {IEEE},
+    address      = {Venice, Italy},
+    doi          = {10.1109/ICCV.2017.324},
 }
 
 @inproceedings{tempscaling,
-    author    = {Guo, Chuan and others},
-    title     = {On Calibration of Modern Neural Networks},
-    booktitle = {ICML},
-    year      = {2017},
-    % TODO-META
+    author       = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+    title        = {On Calibration of Modern Neural Networks},
+    booktitle    = {Proceedings of the 34th International Conference on Machine Learning (ICML 2017)},
+    year         = {2017},
+    series       = {Proceedings of Machine Learning Research},
+    volume       = {70},
+    pages        = {1321--1330},
+    publisher    = {PMLR},
+    address      = {Sydney, Australia},
+    url          = {https://proceedings.mlr.press/v70/guo17a.html},
 }
 
 @inproceedings{selectiveprediction,
-    author    = {Geifman, Yonatan and El-Yaniv, Ran},
-    title     = {Selective Classification for Deep Neural Networks},
-    booktitle = {NeurIPS},
-    year      = {2017},
-    % TODO-META
+    author       = {Geifman, Yonatan and El-Yaniv, Ran},
+    title        = {Selective Classification for Deep Neural Networks},
+    booktitle    = {Advances in Neural Information Processing Systems 30 (NeurIPS 2017)},
+    year         = {2017},
+    pages        = {4878--4887},
+    address      = {Long Beach, USA},
+    url          = {https://papers.nips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html},
 }
 
-@article{ood,
-    author  = {Hendrycks, Dan and Gimpel, Kevin},
-    title   = {A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks},
-    journal = {ICLR},
-    year    = {2017},
-    % TODO-META
+@inproceedings{ood,
+    author       = {Hendrycks, Dan and Gimpel, Kevin},
+    title        = {A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks},
+    booktitle    = {The Fifth International Conference on Learning Representations (ICLR 2017)},
+    year         = {2017},
+    address      = {Toulon, France},
+    url          = {https://openreview.net/forum?id=Hkg4TI9xl},
 }
-
 
 % -------------------------------------------------------------
 % [F] 模板与工具(保留原有 www 条目)
