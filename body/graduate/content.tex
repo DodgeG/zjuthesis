@@ -4,245 +4,192 @@
 % 作者：巩德志  学号：22460420  导师：张朋
 % =============================================================
 
-\chapter{选题背景与研究意义}
+% -------------------------------------------------------------
+% 第一章 选题背景及意义
+% -------------------------------------------------------------
+\chapter{选题背景及意义}
 
 \section{研究背景}
 
-% TODO: 1500 字左右，阐述：
-% 1. 物流行业运营痛点（咨询量大、知识孤岛、分析链路长、人力成本高）
-% 2. 大语言模型与智能体技术在垂直行业的发展趋势
-% 3. 物流领域大模型落地面临的三大挑战：多Agent协同、长链路执行、检索幻觉
-
-\subsection{物流行业运营现状与痛点}
-
-\subsection{大语言模型与智能体技术发展}
-
-\subsection{物流领域智能体落地的关键挑战}
-
+% TODO: 物流运营场景痛点、大模型应用趋势
 
 \section{研究意义}
 
-\subsection{工程价值}
+% TODO: 业务价值 + 学术价值
 
-\subsection{学术价值}
+\section{本文主要工作}
 
-\subsection{行业价值}
+% TODO: 简述两个算法创新 + 系统设计与实现
 
 
+% -------------------------------------------------------------
+% 第二章 国内外研究现状
+% -------------------------------------------------------------
 \chapter{国内外研究现状}
 
-\section{领域大语言模型与指令微调研究}
+\section{领域大语言模型研究现状}
 
-\section{智能体任务规划与工具调用研究}
+% TODO
 
-\section{检索增强生成与检索器优化研究}
+\section{面向智能体的工具使用与规划研究现状}
 
-\section{多意图识别与智能路由研究}
+% TODO
 
-\section{多Agent系统工程与编排框架研究}
+\section{检索增强生成研究现状}
 
-\section{现状小结与不足}
+% TODO
+
+\section{代价敏感学习与安全拒答研究现状}
+
+% TODO
+
+\section{小结与不足}
+
+% TODO
 
 
+% -------------------------------------------------------------
+% 第三章 主要研究方法
+% -------------------------------------------------------------
+\chapter{主要研究方法}
+
+\section{大语言模型微调方法}
+
+% TODO: SFT / LoRA / QLoRA / DPO
+
+\section{面向智能体的工具编排方法}
+
+% TODO: ReAct / Function Calling / FSM 编排
+
+\section{检索增强生成方法}
+
+% TODO: RAG / Dense Retrieval / Rerank
+
+\section{代价敏感学习与不确定性估计方法}
+
+% TODO: 代价矩阵 / Focal Loss / 温度标定 / 双阈值拒答
+
+\section{Agent 系统设计方法}
+
+% TODO: 分层架构 / 记忆 / 工具抽象 / 会话状态
+
+
+% -------------------------------------------------------------
+% 第四章 研究内容与核心创新点
+% -------------------------------------------------------------
 \chapter{研究内容与核心创新点}
 
-\section{研究问题定义}
+\section{代价敏感的分层路由与安全拒答机制}
 
-\subsection{物流智能运营分析助手整体任务形式化}
+\subsection{问题定义}
 
-\subsection{路由层、执行层、知识层三层子问题}
+% TODO: 成本与风险失衡问题
 
-\subsection{误差传播链与评价指标体系}
+\subsection{方法设计}
 
+% TODO: RoBERTa-base 分类头 + 代价矩阵加权 Focal Loss + 温度标定 + 双阈值拒答
 
-\section{核心创新点}
+\subsection{关键技术点}
 
-\subsection{面向多Agent协同的代价敏感路由与安全拒识机制}
+% TODO: 代价矩阵构造 / LoRA 增量学习 / 置信度校准
 
-% TODO: 背景 → 问题 → 方案
+\subsection{评测方案}
 
-\subsection{不确定性感知的工具规划与自修复编排}
+% TODO: 路由准确率 / 拒答率 / 期望代价 / 端到端任务成功率
 
-% TODO: 背景 → 问题 → 方案
 
-\subsection{结构化难负例与生成反馈联合的两阶段检索器优化}
+\section{不确定性感知的工具规划与自修复框架}
 
-% TODO: 背景 → 问题 → 方案
+\subsection{问题定义}
 
+% TODO: 工具调用幻觉、参数乱填、失败死循环
 
-\chapter{系统设计与工程实现}
+\subsection{方法设计}
 
-\section{总体架构设计}
+% TODO: Qwen2.5-7B QLoRA SFT+DPO 规划器 + 1.5B verifier + FSM 修复
 
-\subsection{四层架构:应用层—智能体层—模型服务层—数据与工具层}
+\subsection{关键技术点}
 
-\subsection{模块划分与职责边界}
+% TODO: 偏好数据构造 / verifier 训练目标 / FSM 修复策略
 
-\subsection{请求生命周期与时序图}
+\subsection{评测方案}
 
-\subsection{三大创新点在架构中的定位}
+% TODO: 工具调用准确率 / 参数正确率 / 自修复成功率 / 任务完成率
 
 
-\section{应用层实现}
+% -------------------------------------------------------------
+% 第五章 系统设计与实现
+% -------------------------------------------------------------
+\chapter{系统设计与实现}
 
-\subsection{FastAPI网关:REST与WebSocket双协议}
+\section{系统总体架构}
 
-\subsection{流式输出与长会话管理}
+% TODO: 四层架构 (会话层 / 规划层 / 工具层 / 知识层),模块边界与交互
 
-\subsection{会话上下文存储与多轮对话记忆}
+\section{多轮对话与会话状态管理}
 
-\subsection{鉴权、限流与全链路追踪}
+% TODO: 上下文组织 / 长期记忆 / 追问澄清 / 意图延续
 
+\section{规划器与执行器设计}
 
-\section{智能体层实现}
+% TODO: LLM 规划调用流程 / 执行轨迹 / 依赖调度 / 失败处理
 
-\subsection{子Agent体系}
+\section{工具系统设计与实现}
 
-\subsection{编排层状态机与工具调用循环}
+% TODO: 工具抽象 / 参数 schema / 调用协议 / 结果回填
 
-\subsection{Agent间协作与上下文传递}
+\section{运营场景工具集实现}
 
-\subsection{错误恢复与降级策略}
+% TODO: 指标查询 / 异常定位 / SOP 检索 / 报表生成
 
+\section{知识检索子系统实现}
 
-\section{模型服务层实现}
+% TODO: 领域知识库组织 / 向量+关键词融合检索 / 结果排序
 
-\subsection{物流领域大模型部署}
+\section{分层路由与拒答模块的系统集成}
 
-\subsection{Embedding模型服务}
+% TODO: 算法模型在 Agent 链路中的落地
 
-\subsection{统一推理网关与模型路由}
+\section{业务侧应用集成}
 
+% TODO: 会话界面 / 权限控制 / 反馈回收
 
-\section{数据与工具层实现}
 
-\subsection{向量知识库构建}
+% -------------------------------------------------------------
+% 第六章 研究方案与进度安排
+% -------------------------------------------------------------
+\chapter{研究方案与进度安排}
 
-\subsection{业务数据库与结构化数据接入}
+\section{技术路线}
 
-\subsection{外部工具代理层}
+% TODO
 
-\subsection{工具调用安全与沙箱}
+\section{实验与数据准备}
 
+% TODO
 
-\section{数据工程Pipeline}
-
-\subsection{三类训练数据构建流程}
-
-\subsection{LLM辅助数据合成与人工校验}
-
-\subsection{端到端评测集构造}
-
-\subsection{数据版本管理}
-
-
-\chapter{关键算法技术路线}
-
-\section{总体技术路线图}
-
-\section{创新点一:代价敏感层级路由模块}
-
-\subsection{两级标签体系设计}
-
-\subsection{代价矩阵构造方法}
-
-\subsection{双阈值级联拒识算法}
-
-\subsection{细类头增量学习流程}
-
-
-\section{创新点二:工具规划与自修复编排}
-
-\subsection{ReAct轨迹SFT数据构造}
-
-\subsection{Self-confidence估计方法}
-
-\subsection{``规划-验证-自修复''三阶编排状态机}
-
-\subsection{合成偏好数据生成Pipeline}
-
-\subsection{DPO对齐训练}
-
-
-\section{创新点三:两阶段检索器优化}
-
-\subsection{阶段一:结构化难负例与查询改写}
-
-\subsection{阶段二:生成反馈信号采集与打分}
-
-\subsection{联合微调训练流程}
-
-
-\section{训练框架与显存优化}
-
-\subsection{LLaMA-Factory与QLoRA微调栈}
-
-\subsection{DPO显存优化}
-
-\subsection{分布式训练与checkpoint管理}
-
-
-\section{基线方法与对比实验设计}
-
-
-\chapter{部署与评测方案}
-
-\section{部署形态}
-
-\subsection{容器化与编排}
-
-\subsection{GPU集群调度与资源隔离}
-
-\subsection{灰度发布与A/B测试}
-
-
-\section{评测体系}
-
-\subsection{路由层指标}
-
-\subsection{执行层指标}
-
-\subsection{知识层指标}
-
-\subsection{系统层指标}
-
-\subsection{端到端典型场景评测}
-
-
-\section{消融实验设计}
-
-
-\chapter{预期研究成果}
-
-\section{学术产出}
-
-\section{系统产出}
-
-\section{预期性能指标}
-
-
-\chapter{研究可行性与进度安排}
-
-\section{技术可行性}
-
-\subsection{基座模型与微调方案}
-
-\subsection{算力资源}
-
-\subsection{工程栈成熟度}
-
-
-\section{研究基础}
-
-\subsection{前期文献调研与方法论储备}
-
-\subsection{数据与业务资源}
-
-\subsection{工程基础设施}
-
-
-\section{研究进度安排}
+\section{进度安排}
 
 % TODO: 甘特图
 
-\section{风险识别与应对}
+\section{可能的困难与对策}
+
+% TODO
+
+
+% -------------------------------------------------------------
+% 第七章 预期成果
+% -------------------------------------------------------------
+\chapter{预期成果}
+
+\section{系统成果}
+
+% TODO
+
+\section{学术成果}
+
+% TODO: 论文 / 专利
+
+\section{应用价值}
+
+% TODO
