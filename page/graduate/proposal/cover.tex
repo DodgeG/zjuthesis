@@ -15,19 +15,26 @@
 
 \vskip 22pt
 
-% 居中容器:宽度 0.85\textwidth,label 列固定 4.2cm 顶部对齐,X 列自动填充
+% 前 5 个字段(中文题目/英文题目/姓名/学号/指导教师)用统一 label 列宽
 \begin{center}
 {\zihao{4}\songti
 \renewcommand{\arraystretch}{1.55}
-\begin{tabularx}{0.85\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm} X@{}}
-    中文论文题目：               & \uline{\hfill \TitleLineOne \hfill}     \\
-                                & \uline{\hfill \TitleLineTwo \hfill}     \\
-    英文论文题目：               & \uline{\hfill \TitleEngLineOne \hfill}  \\
-                                & \uline{\hfill \TitleEngLineTwo \hfill}  \\
-    姓\hspace{2em}名：           & \uline{\hfill \StudentName \hfill}      \\
-    学\hspace{2em}号：           & \uline{\hfill \StudentID \hfill}        \\
-    指导教师：                   & \uline{\hfill \AdvisorName \hfill}      \\
-    卓越培养项目/专业类别领域： & \uline{\hfill \Topic \hfill}            \\
+\begin{tabularx}{0.85\textwidth}{@{}>{\raggedright\arraybackslash}p{3.6cm} X@{}}
+    中文论文题目：       & \uline{\hfill \TitleLineOne \hfill}    \\
+                        & \uline{\hfill \TitleLineTwo \hfill}    \\
+    英文论文题目：       & \uline{\hfill \TitleEngLineOne \hfill} \\
+                        & \uline{\hfill \TitleEngLineTwo \hfill} \\
+                        & \uline{\hfill \TitleEngLineThree \hfill} \\
+    姓\hspace{2em}名：   & \uline{\hfill \StudentName \hfill}     \\
+    学\hspace{2em}号：   & \uline{\hfill \StudentID \hfill}       \\
+    指导教师：           & \uline{\hfill \AdvisorName \hfill}     \\
+\end{tabularx}
+
+\vspace{10pt}
+
+% 最后一行:标签较长,单独一个 tabularx,label 列宽 5.5cm 容纳整行中文
+\begin{tabularx}{0.85\textwidth}{@{}>{\raggedright\arraybackslash}p{5.5cm} X@{}}
+    卓越培养项目/专业类别领域： & \uline{\hfill \Topic \hfill} \\
 \end{tabularx}
 }
 \end{center}
