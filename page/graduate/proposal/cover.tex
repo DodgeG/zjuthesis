@@ -2,33 +2,35 @@
 \thispagestyle{empty}
 
 \begin{center}
-    \vspace*{0pt}
-    {\zihao{2}\heiti 浙江大学工程师学院硕士研究生}\\[10pt]
+    \vspace*{-20pt}
+    {\zihao{2}\heiti 浙江大学工程师学院硕士研究生}\\[8pt]
     {\zihao{1}\heiti 开题报告}
 \end{center}
 
-\vskip 25pt
+\vskip 18pt
 
 \begin{center}
-    \includegraphics[width=0.22\paperwidth]{logo/zju.pdf}
+    \includegraphics[width=0.20\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\vskip 30pt
+\vskip 22pt
 
-% 下划线字段行。使用 tabularx + X 列自动换行,\uline 会为每行加下划线,紧贴标签
+% 字段行:题目支持两行,每行独立下划线;其余短字段单行居中下划线
 {\zihao{4}\songti
-\renewcommand{\arraystretch}{2.2}%
+\renewcommand{\arraystretch}{1.7}%
 \begin{tabularx}{\textwidth}{@{}l X@{}}
-    中文论文题目：             & \uline{\Title{}}                    \\
-    英文论文题目：             & \uline{\TitleEng{}}                 \\
-    姓\hspace{2em}名：          & \uline{\hfill \StudentName \hfill}  \\
-    学\hspace{2em}号：          & \uline{\hfill \StudentID \hfill}    \\
-    指导教师：                 & \uline{\hfill \AdvisorName \hfill}  \\
-    卓越培养项目/专业类别领域： & \uline{\hfill \Topic \hfill}        \\
+    中文论文题目：               & \uline{\hfill \TitleLineOne \hfill}     \\
+                                & \uline{\hfill \TitleLineTwo \hfill}     \\
+    英文论文题目：               & \uline{\hfill \TitleEngLineOne \hfill}  \\
+                                & \uline{\hfill \TitleEngLineTwo \hfill}  \\
+    姓\hspace{2em}名：            & \uline{\hfill \StudentName \hfill}      \\
+    学\hspace{2em}号：            & \uline{\hfill \StudentID \hfill}        \\
+    指导教师：                   & \uline{\hfill \AdvisorName \hfill}      \\
+    卓越培养项目/专业类别领域：   & \uline{\hfill \Topic \hfill}            \\
 \end{tabularx}
 }
 
-\vskip 30pt
+\vskip 25pt
 
 \begin{center}
     \zihao{4}\songti
