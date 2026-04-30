@@ -1,81 +1,312 @@
 % =============================================================
 % 参考文献库 ref.bib
-% 分类骨架(TODO: 逐条补全),引用时在正文用 \cite{key}
+% 分类骨架: 引用 key 已登记占位, 字段信息待补全
+% 标注 TODO-META 的条目需要补充 DOI/URL/volume/pages 等完整元数据
 % =============================================================
 
 % -------------------------------------------------------------
-% [A] 领域大语言模型与指令微调
-%   LLaMA / Qwen / ChatGLM / BloombergGPT / Med-PaLM 等领域 LLM
-%   SFT / LoRA / QLoRA / DPO / RLHF 方法论
+% [A] 通用与领域大语言模型
 % -------------------------------------------------------------
-% TODO: @article{llama2, ...}
-% TODO: @article{qwen2_5, ...}
-% TODO: @article{lora, ...}
-% TODO: @article{qlora, ...}
-% TODO: @article{dpo, ...}
+@article{gpt4,
+    author  = {OpenAI},
+    title   = {{GPT-4} Technical Report},
+    journal = {arXiv preprint arXiv:2303.08774},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{llama2,
+    author  = {Touvron, Hugo and others},
+    title   = {{LLaMA} 2: Open Foundation and Fine-Tuned Chat Models},
+    journal = {arXiv preprint arXiv:2307.09288},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{qwen2_5,
+    author  = {{Qwen Team}},
+    title   = {{Qwen2.5} Technical Report},
+    journal = {arXiv preprint arXiv:2412.15115},
+    year    = {2024},
+    % TODO-META
+}
+
+@article{bloomberggpt,
+    author  = {Wu, Shijie and others},
+    title   = {{BloombergGPT}: A Large Language Model for Finance},
+    journal = {arXiv preprint arXiv:2303.17564},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{medpalm,
+    author  = {Singhal, Karan and others},
+    title   = {Large Language Models Encode Clinical Knowledge},
+    journal = {Nature},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{legallm,
+    author  = {{TODO}},
+    title   = {Domain Adaptation of Large Language Models for Legal Applications},
+    journal = {arXiv preprint},
+    year    = {2023},
+    % TODO-META: 替换为具体法律大模型工作, 如 LawGPT / LexiLaw
+}
 
 
 % -------------------------------------------------------------
-% [B] 面向智能体的工具使用与规划
-%   ReAct / Toolformer / Function Calling / Reflexion /
-%   Tree-of-Thoughts / AutoGPT / LangChain / LangGraph
+% [B] 微调与对齐方法
 % -------------------------------------------------------------
-% TODO: @article{react, ...}
-% TODO: @article{toolformer, ...}
-% TODO: @article{reflexion, ...}
+@inproceedings{lora,
+    author    = {Hu, Edward J. and others},
+    title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+    booktitle = {ICLR},
+    year      = {2022},
+    % TODO-META
+}
+
+@article{qlora,
+    author  = {Dettmers, Tim and others},
+    title   = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
+    journal = {NeurIPS},
+    year    = {2023},
+    % TODO-META
+}
+
+@inproceedings{dpo,
+    author    = {Rafailov, Rafael and others},
+    title     = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+    booktitle = {NeurIPS},
+    year      = {2023},
+    % TODO-META
+}
 
 
 % -------------------------------------------------------------
-% [C] 检索增强生成
-%   RAG / DPR / ColBERT / BGE / Contriever / Rerank
+% [C] 智能体、工具使用与规划
 % -------------------------------------------------------------
-% TODO: @article{rag, ...}
-% TODO: @article{bge, ...}
-% TODO: @article{colbert, ...}
+@inproceedings{react,
+    author    = {Yao, Shunyu and others},
+    title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
+    booktitle = {ICLR},
+    year      = {2023},
+    % TODO-META
+}
+
+@inproceedings{toolformer,
+    author    = {Schick, Timo and others},
+    title     = {{Toolformer}: Language Models Can Teach Themselves to Use Tools},
+    booktitle = {NeurIPS},
+    year      = {2023},
+    % TODO-META
+}
+
+@misc{functioncalling,
+    author = {OpenAI},
+    title  = {Function Calling and Other API Updates},
+    year   = {2023},
+    howpublished = {\url{https://openai.com/blog/function-calling-and-other-api-updates}},
+    % TODO-META
+}
+
+@inproceedings{tot,
+    author    = {Yao, Shunyu and others},
+    title     = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
+    booktitle = {NeurIPS},
+    year      = {2023},
+    % TODO-META
+}
+
+@misc{langchain,
+    author = {Chase, Harrison},
+    title  = {{LangChain}},
+    year   = {2023},
+    howpublished = {\url{https://github.com/langchain-ai/langchain}},
+    % TODO-META
+}
+
+@misc{langgraph,
+    author = {{LangChain AI}},
+    title  = {{LangGraph}: Building Stateful, Multi-Actor Applications with LLMs},
+    year   = {2024},
+    howpublished = {\url{https://github.com/langchain-ai/langgraph}},
+    % TODO-META
+}
+
+@article{reflexion,
+    author  = {Shinn, Noah and others},
+    title   = {{Reflexion}: Language Agents with Verbal Reinforcement Learning},
+    journal = {NeurIPS},
+    year    = {2023},
+    % TODO-META
+}
+
+@inproceedings{selfrefine,
+    author    = {Madaan, Aman and others},
+    title     = {{Self-Refine}: Iterative Refinement with Self-Feedback},
+    booktitle = {NeurIPS},
+    year      = {2023},
+    % TODO-META
+}
 
 
 % -------------------------------------------------------------
-% [D] 代价敏感学习与不确定性估计
-%   Cost-sensitive Learning / Focal Loss / Temperature Scaling /
-%   Selective Prediction / Abstention / OOD Detection
+% [D] 检索增强生成与检索器
 % -------------------------------------------------------------
-% TODO: @article{focal_loss, ...}
-% TODO: @article{temperature_scaling, ...}
-% TODO: @article{selective_prediction, ...}
+@inproceedings{rag,
+    author    = {Lewis, Patrick and others},
+    title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+    booktitle = {NeurIPS},
+    year      = {2020},
+    % TODO-META
+}
+
+@inproceedings{dpr,
+    author    = {Karpukhin, Vladimir and others},
+    title     = {Dense Passage Retrieval for Open-Domain Question Answering},
+    booktitle = {EMNLP},
+    year      = {2020},
+    % TODO-META
+}
+
+@inproceedings{colbert,
+    author    = {Khattab, Omar and Zaharia, Matei},
+    title     = {{ColBERT}: Efficient and Effective Passage Search via Contextualized Late Interaction over {BERT}},
+    booktitle = {SIGIR},
+    year      = {2020},
+    % TODO-META
+}
+
+@article{bge,
+    author  = {Xiao, Shitao and others},
+    title   = {{C-Pack}: Packaged Resources To Advance General Chinese Embedding},
+    journal = {arXiv preprint arXiv:2309.07597},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{e5,
+    author  = {Wang, Liang and others},
+    title   = {Text Embeddings by Weakly-Supervised Contrastive Pre-training},
+    journal = {arXiv preprint arXiv:2212.03533},
+    year    = {2022},
+    % TODO-META
+}
+
+@article{hardneg,
+    author  = {Xiong, Lee and others},
+    title   = {Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval},
+    journal = {ICLR},
+    year    = {2021},
+    % TODO-META
+}
+
+@article{queryrewrite,
+    author  = {Ma, Xinbei and others},
+    title   = {Query Rewriting for Retrieval-Augmented Large Language Models},
+    journal = {EMNLP},
+    year    = {2023},
+    % TODO-META
+}
+
+@article{rerank,
+    author  = {Nogueira, Rodrigo and Cho, Kyunghyun},
+    title   = {Passage Re-ranking with {BERT}},
+    journal = {arXiv preprint arXiv:1901.04085},
+    year    = {2019},
+    % TODO-META
+}
+
+@article{repllama,
+    author  = {Ma, Xueguang and others},
+    title   = {Fine-Tuning {LLaMA} for Multi-Stage Text Retrieval},
+    journal = {SIGIR},
+    year    = {2024},
+    % TODO-META
+}
 
 
 % -------------------------------------------------------------
-% [E] 物流运营与行业应用
-%   智能客服 / 运营分析 / 物流大模型 / 行业智能体落地
+% [E] 代价敏感学习与不确定性估计
 % -------------------------------------------------------------
-% TODO: @article{logistics_llm_survey, ...}
-% TODO: @techreport{industry_report, ...}
+@article{costsensitive,
+    author  = {Elkan, Charles},
+    title   = {The Foundations of Cost-Sensitive Learning},
+    journal = {IJCAI},
+    year    = {2001},
+    % TODO-META
+}
+
+@inproceedings{focalloss,
+    author    = {Lin, Tsung-Yi and others},
+    title     = {Focal Loss for Dense Object Detection},
+    booktitle = {ICCV},
+    year      = {2017},
+    % TODO-META
+}
+
+@inproceedings{tempscaling,
+    author    = {Guo, Chuan and others},
+    title     = {On Calibration of Modern Neural Networks},
+    booktitle = {ICML},
+    year      = {2017},
+    % TODO-META
+}
+
+@inproceedings{selectiveprediction,
+    author    = {Geifman, Yonatan and El-Yaniv, Ran},
+    title     = {Selective Classification for Deep Neural Networks},
+    booktitle = {NeurIPS},
+    year      = {2017},
+    % TODO-META
+}
+
+@article{llmabstain,
+    author  = {Feng, Shangbin and others},
+    title   = {Don't Hallucinate, Abstain: Identifying {LLM} Knowledge Gaps via Multi-{LLM} Collaboration},
+    journal = {ACL},
+    year    = {2024},
+    % TODO-META
+}
+
+@article{ood,
+    author  = {Hendrycks, Dan and Gimpel, Kevin},
+    title   = {A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks},
+    journal = {ICLR},
+    year    = {2017},
+    % TODO-META
+}
 
 
 % -------------------------------------------------------------
 % [F] 模板与工具(保留原有 www 条目)
 % -------------------------------------------------------------
 @www{zjuthesisrules,
-    title = {浙江大学本科生毕业论文（设计）编写规则},
+    title  = {浙江大学本科生毕业论文（设计）编写规则},
     author = {浙江大学本科生院},
-    year = {2018},
-    url = {http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf},
+    year   = {2018},
+    url    = {http://bksy.zju.edu.cn/attachments/2018-01/01-1517384518-1149149.pdf},
 }
+
 @www{tikz,
-    title = {tikz宏包},
+    title  = {tikz宏包},
     author = {Till Tantau},
-    year = {2018},
-    url = {https://sourceforge.net/projects/pgf/},
+    year   = {2018},
+    url    = {https://sourceforge.net/projects/pgf/},
 }
+
 @www{zjuthesis,
-    title = {浙江大学毕业设计/论文模板},
+    title  = {浙江大学毕业设计/论文模板},
     author = {Zixuan Wang},
-    year = {2019},
-    url = {https://github.com/TheNetAdmin/zjuthesis},
+    year   = {2019},
+    url    = {https://github.com/TheNetAdmin/zjuthesis},
 }
+
 @www{zjugradthesisrules,
-    title = {浙江大学研究生学位论文编写规则},
+    title  = {浙江大学研究生学位论文编写规则},
     author = {浙江大学研究生院},
-    year = {2008},
-    url = {http://grs.zju.edu.cn/redir.php?catalog_id=10038&object_id=12877},
+    year   = {2008},
+    url    = {http://grs.zju.edu.cn/redir.php?catalog_id=10038&object_id=12877},
 }
