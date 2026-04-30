@@ -2,35 +2,43 @@
 \thispagestyle{empty}
 
 \begin{center}
-    \vspace*{-20pt}
+    \vspace*{-30pt}
     {\zihao{2}\heiti 浙江大学工程师学院硕士研究生}\\[8pt]
     {\zihao{1}\heiti 开题报告}
 \end{center}
 
-\vskip 18pt
+\vskip 15pt
 
 \begin{center}
-    \includegraphics[width=0.20\paperwidth]{logo/zju.pdf}
+    \includegraphics[width=0.18\paperwidth]{logo/zju.pdf}
 \end{center}
 
-\vskip 22pt
+\vskip 18pt
 
-% 字段行:题目支持两行,每行独立下划线;其余短字段单行居中下划线
+% 每个字段作为一整行:label 后紧跟 \uline,\uline 内部用 X 列自动填满剩余宽度
+% 不再对齐各行 label 的右边界,下划线紧贴 label
 {\zihao{4}\songti
-\renewcommand{\arraystretch}{1.7}%
-\begin{tabularx}{\textwidth}{@{}l X@{}}
-    中文论文题目：               & \uline{\hfill \TitleLineOne \hfill}     \\
-                                & \uline{\hfill \TitleLineTwo \hfill}     \\
-    英文论文题目：               & \uline{\hfill \TitleEngLineOne \hfill}  \\
-                                & \uline{\hfill \TitleEngLineTwo \hfill}  \\
-    姓\hspace{2em}名：            & \uline{\hfill \StudentName \hfill}      \\
-    学\hspace{2em}号：            & \uline{\hfill \StudentID \hfill}        \\
-    指导教师：                   & \uline{\hfill \AdvisorName \hfill}      \\
-    卓越培养项目/专业类别领域：   & \uline{\hfill \Topic \hfill}            \\
-\end{tabularx}
+\newcommand{\cvrow}[2]{%
+    \noindent\begin{tabularx}{\textwidth}{@{}l X@{}}
+        #1 & \uline{\hfill #2 \hfill}
+    \end{tabularx}\par\vspace{10pt}%
+}
+\newcommand{\cvrowtwo}[3]{%
+    \noindent\begin{tabularx}{\textwidth}{@{}l X@{}}
+        \multirow{2}{*}{#1} & \uline{\hfill #2 \hfill} \\
+                            & \uline{\hfill #3 \hfill}
+    \end{tabularx}\par\vspace{10pt}%
 }
 
-\vskip 25pt
+\cvrowtwo{中文论文题目：}{\TitleLineOne}{\TitleLineTwo}
+\cvrowtwo{英文论文题目：}{\TitleEngLineOne}{\TitleEngLineTwo}
+\cvrow{姓\hspace{2em}名：}{\StudentName}
+\cvrow{学\hspace{2em}号：}{\StudentID}
+\cvrow{指导教师：}{\AdvisorName}
+\cvrow{卓越培养项目/专业类别领域：}{\Topic}
+}
+
+\vskip 15pt
 
 \begin{center}
     \zihao{4}\songti
